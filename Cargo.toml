@@ -1,0 +1,17 @@
+[package]
+name = "must-let"
+version = "0.1.0"
+authors = ["Sujay Jayakar <sujayakar314@gmail.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quote = "1.0.7"
+
+[dependencies.syn]
+version = "1.0.39"
+features = ["full", "visit"]

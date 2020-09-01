@@ -28,9 +28,7 @@ struct IdentVisitor {
 impl<'ast> Visit<'ast> for IdentVisitor {
     fn visit_pat_ident(&mut self, node: &'ast PatIdent) {
         self.idents.push(node.ident.clone());
-        if let Some((_, ref subpat)) = node.subpat {
-            visit::visit_pat(self, subpat);
-        }
+        visit::visit_pat_ident(self, node);
     }
 }
 
